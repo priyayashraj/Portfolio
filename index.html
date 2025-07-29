@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Portfolio Website-Brad</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- bootstrap CDN -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script> -->
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- linking css file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- navbar -->
+    <!-- https://getbootstrap.com/docs/5.2/components/navbar/ -->
+    <!-- Add class of bg-light to nav element -->
+    <nav>
+        <div class="horizontal header">
+            <a class="navbar-brand" href="#">priya.dev</a>
+
+            <button class="navbar-toggler" onclick="toggleNavbar()">
+                <i class="fa fa-bars"></i>
+            </button>
+            <div class="navbar">
+                <ul class="horizontal nav-list">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- main banner -->
+    <!-- https://getbootstrap.com/docs/5.2/layout/containers/ -->
+    <!-- https://getbootstrap.com/docs/5.2/layout/grid/ -->
+    <section class="section center-align">
+        <div class="grid-image-right">
+            <h1 class="grid-title">Software Engineer</h1>
+            <p class="grid-about">Hi! I am Priya Yasraj. A Software Engineer based in Pune, India.</p>
+            <img id="repel-image" class="grid-photo profile" alt="my profile" src="./images/pic.jpg" />
+        </div>
+    </section>
+
+    <!-- about section -->
+    <section class="section center-align">
+        <div class="grid-image-left">
+            <h1 class="grid-title">About Me</h1>
+            <img class="grid-photo laptop-image" alt="" src="./images/laptop.webp">
+            <p class="grid-about"> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not
+                only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged
+
+            </p>
+        </div>
+    </section>
+
+    <!-- services section-->
+    <!-- https://getbootstrap.com/docs/5.2/components/card/#about -->
+    <section class="section center-align">
+        <div class="project">
+            <h1 class="text-center title">Projects</h1>
+            <div class="carousel">
+                <div class="mySlides carousel__item">
+                    <div class="grid-image-right">
+                        <h1 class="grid-title">About Me</h1>
+                        <img class="grid-photo laptop-image" alt="" src="./images/laptop.webp">
+                        <p class="grid-about"> Lorem Ipsum has been the industry's standard dummy text ever since the
+                            1500s, when an
+                            unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+                            survived not
+                            only five centuries, but also the leap into electronic typesetting, remaining essentially
+                            unchanged
+
+                        </p>
+                        <a href="#" class="my_contact">Link</a>
+                    </div>
+                </div>
+                <div class="mySlides carousel__item">
+                    <div class="grid-image-right">
+                        <h1 class="grid-title">About Me</h1>
+                        <img class="grid-photo laptop-image" alt="" src="./images/Profile.JPG">
+                        <p class="grid-about"> Lorem Ipsum has been the industry's standard dummy text ever since the
+                            1500s, when an
+                            unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+                            survived not
+                            only five centuries, but also the leap into electronic typesetting, remaining essentially
+                            unchanged
+
+                        </p>
+                        <a href="#" class="my_contact">Link</a>
+                    </div>
+                </div>
+                <div class="mySlides carousel__item">
+                    <div class="grid-image-right">
+                        <h1 class="grid-title">About Me</h1>
+                        <img class="grid-photo laptop-image" alt="" src="./images/laptop.webp">
+                        <p class="grid-about"> Lorem Ipsum has been the industry's standard dummy text ever since the
+                            1500s, when an
+                            unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+                            survived not
+                            only five centuries, but also the leap into electronic typesetting, remaining essentially
+                            unchanged
+
+                        </p>
+                        <a href="#" class="my_contact">Link</a>
+                    </div>
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- contact section-->
+    <!-- https://getbootstrap.com/docs/5.2/forms/overview -->
+    <section class="section center-align">
+        <div class="contact">
+            <h1 class="text-center title">Contact Me</h1>
+            <!-- form fields -->
+            <form class="form">
+                <input type="text" class="form-fields" placeholder="Name">
+                <input type="email" class="form-fields" placeholder="Email">
+                <input type="text" class="form-fields" placeholder="Subject">
+                <textarea class="form-fields text-area" rows="5" id="comment" name="text"
+                    placeholder="Project Details"></textarea>
+            </form>
+            <div class="center-align">
+                <button type="button" class="contact-me text-center">Contact Me</button>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- footer section-->
+    <footer class="container-fluid footer" id="footer">
+        <!-- social media icons -->
+        <div class="social-icons mt-4">
+            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.twitch.tv/" target="_blank"><i class="fab fa-twitch"></i></a>
+        </div>
+    </footer>
+
+
+    <!-- load javascript after loading all html content -->
+    <script src="script/script.js"></script>
+
+</body>
+
+</html>
